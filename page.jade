@@ -1,0 +1,36 @@
+doctype 5
+html(ng-app='test_angular_animation')
+	head
+		link(rel="stylesheet", href="page.css")
+		script(src="http://localhost:35729/livereload.js")
+		script(src="http://code.angularjs.org/snapshot/angular.js")
+		script(src="http://code.angularjs.org/snapshot/angular-animate.js")
+		script(src="page.js")
+
+	body(ng-controller='mycontroller')
+		
+		h1 Test Angular.js Animation
+		h2 using Angular 1.2
+		h3 by Nick Perkins
+		h4 2013-09-28
+
+		hr 
+
+		table
+			tr
+				td
+					span Target List Size:
+				td
+					input(ng-model="target_list_size")
+			tr
+				td
+					span Changes Per Second:
+				td
+					input(ng-model="cycles_per_second")
+
+		hr
+		span list size: {{ things.length }}
+		div.thing(
+			ng-repeat="thing in things"
+			)
+			{{ thing }}

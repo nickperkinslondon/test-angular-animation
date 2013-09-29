@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="test_angular_animation">
+  <head>
+    <link rel="stylesheet" href="page.css">
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+    <script src="http://code.angularjs.org/snapshot/angular-animate.js"></script>
+    <script src="page.js"></script>
+  </head>
+  <body ng-controller="mycontroller">
+    <h1>Test Angular.js Animation</h1>
+    <h2>using Angular 1.2</h2>
+    <h3>by Nick Perkins</h3>
+    <h4>2013-09-28</h4>
+    <hr>
+    <table>
+      <tr>
+        <td><span>Target List Size:</span></td>
+        <td>
+          <input ng-model="target_list_size">
+        </td>
+      </tr>
+      <tr>
+        <td><span>Changes Per Second:</span></td>
+        <td>
+          <input ng-model="cycles_per_second">
+        </td>
+      </tr>
+    </table>
+    <hr><span>list size: {{ things.length }}</span>
+    <div ng-repeat="thing in things" class="thing">{{ thing }}</div>
+  </body>
+</html>

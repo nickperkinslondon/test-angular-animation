@@ -1,0 +1,31 @@
+
+body
+	font-family Arial
+
+.thing
+	padding 5px
+
+.thing.ng-enter
+	transition 900ms ease all
+	max-height 0px
+	color white
+	position relative
+	left  -100px
+
+.thing.ng-enter-active
+	max-height 50px
+	color green
+	left 0px
+
+
+.thing.ng-leave
+	transition 900ms ease all
+	max-height 50px
+	color red
+	position relative
+	left 0px
+
+.thing.ng-leave-active
+	max-height 0px
+	color white
+	left  -100px
